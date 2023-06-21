@@ -51,12 +51,11 @@ export default function Map({
         ))}
       </MapContainer>
 
-      {isListView && selectedParkId !== null && (
+      {isListView && selectedParkId !== null && parks && (
         <ParksListCard
           park={
             parks.find((park) => park.id.toString() === selectedParkId) || null
           }
-          parks={parks}
           fullWidth={true}
         />
       )}

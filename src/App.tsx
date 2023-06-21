@@ -18,7 +18,7 @@ import { Stack } from "@mui/system";
 import "./Styles/reset.css";
 
 function App() {
-  const [email, setEmail] = useState(null);
+  const [email, setEmail] = useState<string>("");
   const [parks, setParks] = React.useState<Park[]>([]);
   const [queries, setQueries] = React.useState<string>("");
   const [city, setCity] = React.useState("");

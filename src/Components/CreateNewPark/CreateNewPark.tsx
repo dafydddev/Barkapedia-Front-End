@@ -8,7 +8,7 @@ import OpeningTimes from "./OpeningTimes";
 import { Grid, Button } from "@mui/material";
 import postPark from "../../utils/postPark";
 import { ParkSubmissionObject } from "../../types/CustomTypes";
-import { Form, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 // import AddPhoto from "./AddPhoto";
 
 function CreateNewPark() {

@@ -53,7 +53,7 @@ export default function ShowParks({
   const [selectedParkId, setSelectedParkId] = React.useState<string | null>(
     null
   );
-  const [park, setPark] = React.useState<Park | null>(null);
+  const [park, _setPark] = React.useState<Park | null>(null);
   const handleChange = (_: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };

@@ -24,11 +24,11 @@ function Home({ uniqueParks, setQueries, setCity }: HomeProps) {
       sx={{ justifyContent: "center", alignItems: "center", height: "75%" }}
     >
       <Autocomplete
-        onChange={(event: any, newValue: string | null) => {
+        onChange={(_event: any, newValue: string | null) => {
           setValue(newValue === "Any" ? "" : `?city=${newValue}`);
         }}
         inputValue={inputValue}
-        onInputChange={(event, newInputValue) => {
+        onInputChange={(_event, newInputValue) => {
           setInputValue(newInputValue);
         }}
         id="city-dropdown"

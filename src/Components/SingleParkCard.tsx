@@ -45,7 +45,7 @@ export default function SingleParkCard({
   isLoading,
 }: SingleParkProps) {
   const [expanded, setExpanded] = React.useState(false);
-  const [parks, setParks] = React.useState<Park[]>([]);
+  const [parks, _setParks] = React.useState<Park[]>([]);
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
@@ -58,8 +58,16 @@ export default function SingleParkCard({
     {
       position: [parsedLat, parsedLong] as LatLngTuple,
       content: singlePark.name,
+      parkId: singlePark.id
     },
   ];
+
+  const [selectedParkId, setSelectedParkId] = React.useState<string | null>(
+    null
+  );
+  const handleMarkerClick = (parkId: string) => {
+    setSelectedParkId(parkId);
+  };
 
   if (isLoading) {
     return <h3 className="loading">Loading...</h3>;
@@ -88,6 +96,8 @@ export default function SingleParkCard({
           markers={mapMarkers}
           parks={parks}
           isListView={false}
+          onMarkerClick={handleMarkerClick}
+          selectedParkId={selectedParkId}
         />
         <Typography sx={{marginTop:"20px"}} variant="body2" color="text.secondary">
           {singlePark.desc}

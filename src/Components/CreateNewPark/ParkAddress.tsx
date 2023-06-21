@@ -2,7 +2,6 @@ import * as React from "react";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import { ParkAddressProps } from "../../types/CustomTypes";
-import { FormGroup } from "@mui/material";
 
 function ParkAddress({ setParkAddress, regex }: ParkAddressProps) {
   const [firstLine, setFirstLine] = React.useState("");
