@@ -15,7 +15,7 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
-import { orderObj } from "../types/CustomTypes";
+import { orderObj, FiltersProps } from "../types/CustomTypes";
 import Button from "@mui/material/Button";
 import { useState } from "react";
 
@@ -33,11 +33,6 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
     duration: theme.transitions.duration.shortest,
   }),
 }));
-
-interface FiltersProps {
-  setQueries: Function;
-  city: string;
-}
 
 function Filters({ setQueries, city }: FiltersProps) {
   const [expanded, setExpanded] = React.useState(false);
@@ -73,7 +68,6 @@ function Filters({ setQueries, city }: FiltersProps) {
     } else {
       checkboxes[name as keyof object] ? (checked = false) : (checked = true);
     }
-
     setCheckboxes({
       ...checkboxes,
       [name]: checked,
@@ -88,20 +82,6 @@ function Filters({ setQueries, city }: FiltersProps) {
   const [order, setOrder] = React.useState("");
   const handleOrderChange = (event: SelectChangeEvent) => {
     setOrder(event.target.value);
-  };
-
-  const handleReset = () => {
-    setOrderParam("");
-    setOrder("");
-    setCheckboxes({
-      isFree: false,
-      isWellLit: false,
-      isFreeParking: false,
-      isParking: false,
-      hasAgilityEquipment: false,
-      isFullyEnclosed: false,
-      hasDisabledAccess: false,
-    });
   };
 
   const orderObj: orderObj = {
@@ -126,10 +106,24 @@ function Filters({ setQueries, city }: FiltersProps) {
   if (orderObj.order !== "") {
     queryString += `:${orderObj.order}`;
   }
+
   React.useEffect(() => {
     setQueries(queryString);
   }, [queryString]);
 
+  const handleReset = () => {
+    setOrderParam("");
+    setOrder("");
+    setCheckboxes({
+      isFree: false,
+      isWellLit: false,
+      isFreeParking: false,
+      isParking: false,
+      hasAgilityEquipment: false,
+      isFullyEnclosed: false,
+      hasDisabledAccess: false,
+    });
+  };
   return (
     <Card sx={{ maxWidth: "100%" }}>
       <div>
@@ -144,7 +138,7 @@ function Filters({ setQueries, city }: FiltersProps) {
             <ExpandMoreIcon />
           </ExpandMore>
         </CardActions>
-        {activeFilters === true ? (
+        {activeFilters === true && (
           <CardContent>
             {checkboxes.isFree && (
               <Button
@@ -157,8 +151,74 @@ function Filters({ setQueries, city }: FiltersProps) {
                 Free Entry&nbsp;<CancelIcon></CancelIcon>
               </Button>
             )}
+            {checkboxes.isWellLit && (
+              <Button
+                className="filter-button"
+                variant="outlined"
+                name="isWellLit"
+                onClick={(event: any) => handleCheckboxChange(event)}
+                sx={{ marginLeft: "10px", marginBottom: "10px" }}
+              >
+                Well Lit&nbsp;<CancelIcon></CancelIcon>
+              </Button>
+            )}
+            {checkboxes.isFreeParking && (
+              <Button
+                className="filter-button"
+                variant="outlined"
+                name="isFreeParking"
+                onClick={(event: any) => handleCheckboxChange(event)}
+                sx={{ marginLeft: "10px", marginBottom: "10px" }}
+              >
+                Free Parking&nbsp;<CancelIcon></CancelIcon>
+              </Button>
+            )}
+            {checkboxes.isParking && (
+              <Button
+                className="filter-button"
+                variant="outlined"
+                name="isParking"
+                onClick={(event: any) => handleCheckboxChange(event)}
+                sx={{ marginLeft: "10px", marginBottom: "10px" }}
+              >
+                Parking Available&nbsp;<CancelIcon></CancelIcon>
+              </Button>
+            )}
+            {checkboxes.hasAgilityEquipment && (
+              <Button
+                className="filter-button"
+                variant="outlined"
+                name="hasAgilityEquipment"
+                onClick={(event: any) => handleCheckboxChange(event)}
+                sx={{ marginLeft: "10px", marginBottom: "10px" }}
+              >
+                Agility Equipment&nbsp;<CancelIcon></CancelIcon>
+              </Button>
+            )}
+            {checkboxes.isFullyEnclosed && (
+              <Button
+                className="filter-button"
+                variant="outlined"
+                name="isFullyEnclosed"
+                onClick={(event: any) => handleCheckboxChange(event)}
+                sx={{ marginLeft: "10px", marginBottom: "10px" }}
+              >
+                Fully Enclosed&nbsp;<CancelIcon></CancelIcon>
+              </Button>
+            )}
+            {checkboxes.hasDisabledAccess && (
+              <Button
+                className="filter-button"
+                variant="outlined"
+                name="hasDisabledAccess"
+                onClick={(event: any) => handleCheckboxChange(event)}
+                sx={{ marginLeft: "10px", marginBottom: "10px" }}
+              >
+                Mobility Accessible&nbsp;<CancelIcon></CancelIcon>
+              </Button>
+            )}
           </CardContent>
-        ) : null}
+        )}
       </div>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
