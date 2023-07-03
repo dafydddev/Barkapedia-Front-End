@@ -233,3 +233,7 @@ export interface LoginContextType {
   setType: (type: any) => void;
   setIsVerified: (isVerified: any) => void;
 }
+interface FiltersProps {
+  setQueries: Function;
+  city: string;
+}
