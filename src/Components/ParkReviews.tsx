@@ -1,4 +1,4 @@
-import { ReviewProps } from "../types/CustomTypes";
+import { ReviewProps } from "../../types/CustomTypes";
 import SingleReview from "./SingleReview";
 import "../Styles/card-list.css";
 import "../Styles/styles.css";

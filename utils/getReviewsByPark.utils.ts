@@ -1,4 +1,4 @@
-import server from "../Api/api";
+import server from "./Express";
 
 export default function getReviews(park_id: string | undefined) {
   return server

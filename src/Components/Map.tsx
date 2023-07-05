@@ -4,7 +4,7 @@ import "leaflet/dist/leaflet.css";
 import "./Map.css";
 import markerIconPng from "leaflet/dist/images/marker-icon.png";
 import ParksListCard from "./ParksListCard";
-import { MapProps } from "../types/CustomTypes";
+import { MapProps } from "../../types/CustomTypes";
 
 export default function Map({
   markers,

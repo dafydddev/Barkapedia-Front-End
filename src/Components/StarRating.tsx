@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography, Rating, Box } from "@mui/material";
-import { ParkRatingProps } from "../types/CustomTypes";
+import { ParkRatingProps } from "../../types/CustomTypes";
 
 const ParkRating: React.FC<ParkRatingProps> = ({ rating, reviewCount }) => {
   return (

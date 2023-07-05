@@ -1,5 +1,5 @@
 import ParksListCard from "./ParksListCard";
-import { ParksListProps } from "../types/CustomTypes";
+import { ParksListProps } from "../../types/CustomTypes";
 import "../Styles/card-list.css";
 import "../Styles/styles.css"
 import { Grid } from "@mui/material";

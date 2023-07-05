@@ -1,4 +1,4 @@
-import server from "../Api/api";
+import server from "./Express";
 import { ReviewData } from "../types/CustomTypes";
 
 export function postReview(reviewData: ReviewData) {

@@ -1,4 +1,4 @@
-import server from "../Api/api";
+import server from "./Express";
 import { User } from "../types/CustomTypes";
 
 const getUserByID = (user_id: string): Promise<User> => {

@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "types/CustomTypes.d.ts", "utils/utils", "utils/getReviewsByPark.utils.ts", "utils/Express.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

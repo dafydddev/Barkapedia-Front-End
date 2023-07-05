@@ -3,7 +3,7 @@ import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
-import { ParksListCardProps } from "../types/CustomTypes";
+import { ParksListCardProps } from "../../types/CustomTypes";
 import StarRating from "./StarRating";
 import { Link } from "react-router-dom";
 import "../Styles/card-list.css";

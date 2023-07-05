@@ -1,6 +1,6 @@
 import { InputLabel, MenuItem, FormControl, ListItemText } from "@mui/material";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { ParkSizeProps } from "../../types/CustomTypes";
+import { ParkSizeProps } from "../../../types/CustomTypes";
 
 function SizeDropdown({ parkSize, setParkSize }: ParkSizeProps) {
   const sizes = [

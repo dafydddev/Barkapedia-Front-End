@@ -1,4 +1,4 @@
-import server from "../Api/api";
+import server from "./Express";
 import { PatchReviewResponse, ReviewVoteRequest } from "../types/CustomTypes";
 
 const patchReviewVotes = (reviewRequest: ReviewVoteRequest): Promise<PatchReviewResponse> => {

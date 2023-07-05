@@ -7,7 +7,7 @@ import CardActions from "@mui/material/CardActions";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { LatLngTuple } from "leaflet";
-import { Park, Review } from "../types/CustomTypes";
+import { Park, Review } from "../../types/CustomTypes";
 import ParkRating from "./StarRating";
 import Map from "./Map";
 import ParkReviews from "./ParkReviews";
@@ -16,7 +16,6 @@ import { Link, useParams } from "react-router-dom";
 import { LoginContext } from "../Context/loginContext";
 import { useContext } from "react";
 import { Button } from "@mui/material";
-
 
 interface SingleParkProps {
   singlePark: Park;

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import getSinglePark from "../utils/getSinglePark.utils";
+import getSinglePark from "../../utils/getSinglePark.utils";
 import { useParams } from "react-router-dom";
-import { Park, Review } from "../types/CustomTypes";
+import { Park, Review } from "../../types/CustomTypes";
 import SingleParkCard from "./SingleParkCard";
-import getReviews from "../utils/getReviewsByPark.utils";
+import getReviews from "../../utils/getReviewsByPark.utils";
 import "../Styles/styles.css"
 
 function SinglePark() {

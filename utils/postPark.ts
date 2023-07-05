@@ -1,4 +1,4 @@
-import server from "../Api/api";
+import server from "./Express";
 import { ParkSubmissionObject } from "../types/CustomTypes";
 
 export default function postPark(park: ParkSubmissionObject) {

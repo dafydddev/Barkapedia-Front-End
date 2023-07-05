@@ -1,4 +1,4 @@
-import { OpeningTimesProps } from "../../types/CustomTypes";
+import { OpeningTimesProps } from "../../../types/CustomTypes";
 import * as React from "react";
 import { TextField, Box } from "@mui/material";
 

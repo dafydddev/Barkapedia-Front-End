@@ -8,7 +8,7 @@ import FormGroup from "@mui/material/FormGroup";
 import Typography from "@mui/material/Typography";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import postUser from "../utils/postUser";
+import postUser from "../../utils/postUser";
 import "../Styles/register.css";
 import { useNavigate } from "react-router-dom";
 

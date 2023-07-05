@@ -3,10 +3,10 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import { firebaseSignIn } from "../../firebaseUtils/Firebase";
+import { firebaseSignIn } from "../../utils/Firebase";
 import { useState, useContext } from "react";
 import { LoginContext } from "../Context/loginContext";
-import getUserById from "../utils/getUserByID.utils";
+import getUserById from "../../utils/getUserByID.utils";
 import { useNavigate, Link } from "react-router-dom";
 
 interface SignInProps {

@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { LoginContextType } from "../types/CustomTypes";
+import { LoginContextType } from "../../types/CustomTypes";
 
 export const LoginContext = createContext<LoginContextType>({
   email: null,

@@ -6,15 +6,14 @@ import ParkAddress from "./ParkAddress";
 import SizeDropdown from "./SizeDropdown";
 import OpeningTimes from "./OpeningTimes";
 import { Button } from "@mui/material";
-import postPark from "../../utils/postPark";
+import postPark from "../../../utils/postPark";
+
 import {
   CreateNewParkProps,
   ParkSubmissionObject,
-} from "../../types/CustomTypes";
+} from "../../../types/CustomTypes";
 import { useNavigate } from "react-router-dom";
 import { LoginContext } from "../../Context/loginContext";
-
-// import AddPhoto from "./AddPhoto";
 
 function CreateNewPark({ parks, setForceGetParks }: CreateNewParkProps) {
   const [parkName, setParkName] = React.useState("");

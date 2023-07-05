@@ -5,7 +5,7 @@ import FormControl from "@mui/material/FormControl";
 import ListItemText from "@mui/material/ListItemText";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import Checkbox from "@mui/material/Checkbox";
-import { FeaturesDropDownProps } from "../../types/CustomTypes";
+import { FeaturesDropDownProps } from "../../../types/CustomTypes";
 
 function FeaturesDropdown({ setParkFeatures }: FeaturesDropDownProps) {
   const ITEM_HEIGHT = 100;

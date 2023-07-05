@@ -1,4 +1,4 @@
-import server from "../Api/api";
+import server from "./Express";
 import { UserRequest } from "../types/CustomTypes";
 
 export default function postUser(user: UserRequest) {

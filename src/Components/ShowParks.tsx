@@ -7,7 +7,7 @@ import ParksList from "./ParksList";
 import Map from "./Map";
 import ParksListCard from "./ParksListCard";
 import Filters from "./Filters";
-import { Park, TabPanelProps, ShowParksInterface } from "../types/CustomTypes";
+import { Park, TabPanelProps, ShowParksInterface } from "../../types/CustomTypes";
 import { LatLngTuple } from "leaflet";
 import "../Styles/styles.css";
 

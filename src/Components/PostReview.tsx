@@ -1,13 +1,11 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import CreateReview from "./CreateReview";
-import getSinglePark from "../utils/getSinglePark.utils";
+import getSinglePark from "../../utils/getSinglePark.utils";
 import { LoginContext } from "../Context/loginContext";
 import { useContext } from "react";
 import { Typography } from "@mui/material";
-import { Park } from "../types/CustomTypes";
-
-
+import { Park } from "../../types/CustomTypes";
 
 export default function PostReview() {
   const { park_id } = useParams<{ park_id: string }>();

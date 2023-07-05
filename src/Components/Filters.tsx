@@ -15,7 +15,7 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
-import { orderObj } from "../types/CustomTypes";
+import { orderObj } from "../../types/CustomTypes";
 import Button from "@mui/material/Button";
 import { useState } from "react";
 
